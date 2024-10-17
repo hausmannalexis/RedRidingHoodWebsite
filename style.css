@@ -9,7 +9,6 @@ header {
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
     width: 50%; /* Set width */
     margin: 0 auto; /* Center header */
-    padding: 1pt; /* Optional padding */
     font-size: 22pt;
 }
 
