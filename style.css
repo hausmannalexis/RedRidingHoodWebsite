@@ -1,0 +1,37 @@
+/* General Page Background */
+html {
+    background-color: white;
+}
+
+/* Header Section Styling */
+header {
+    color: red;
+    font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+}
+
+/* Navigation Styling */
+nav {
+    color: black;
+    padding: 1rem;
+    font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+}
+
+/* Main Content Styling */
+main {
+    color: black;
+    font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+}
+
+/* Footer Section Styling */
+footer {
+    color: black;
+    font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+}
+
+/* Custom Pixel Font Styling */
+.pixelify-sans-Pixel {
+    font-family: "Pixelify Sans", sans-serif; /* Correct usage of font */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
