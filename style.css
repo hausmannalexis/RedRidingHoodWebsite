@@ -1,31 +1,67 @@
 /* General Page Background */
 html {
-    background-color: white;
+    background-color: black;
 }
 
 /* Header Section Styling */
 header {
     color: red;
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+    width: 50%; /* Set width */
+    margin: 0 auto; /* Center header */
+    padding: 1pt; /* Optional padding */
+    font-size: 22pt;
 }
 
 /* Navigation Styling */
 nav {
-    color: black;
+    color: white;
     padding: 1rem;
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+    width: 50%; /* Set width to match header and main */
+    margin: 0 auto; /* Center the nav */
+}
+
+nav .nav-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox to align items */
+}
+
+nav .nav-item {
+    margin-right: 20px; /* Space between items */
+}
+
+nav .nav-item:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+nav a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline if desired */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 /* Main Content Styling */
 main {
-    color: black;
+    color: white;
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+    width: 50%; /* Set width */
+    margin: 0 auto; /* Center main content */
+    padding: 1rem; /* Optional padding */
 }
 
 /* Footer Section Styling */
 footer {
-    color: black;
+    color: white;
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+    width: 50%; /* Set width */
+    margin: 0 auto; /* Center footer */
+    padding: 1rem; /* Optional padding */
 }
 
 /* Custom Pixel Font Styling */
