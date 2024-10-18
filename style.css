@@ -11,7 +11,8 @@ header {
     width: 50%; /* Set width */
     margin: 0 auto; /* Center header */
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -21,11 +22,12 @@ header h1 {
     -3px -3px 0 #000,
     3px -3px 0 #000;
     color: red;
-    font-size: 30pt;
+    font-size: 26pt;
 }
 
 header img {
-  
+    width: 50px;
+    height: auto;
 }
 
 
