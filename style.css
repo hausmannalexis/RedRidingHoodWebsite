@@ -2,24 +2,32 @@
 html {
     background-color: white;
     scroll-behavior: smooth;
+    font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
+
 }
 
 /* Header Section Styling */
 header {
-    color: red;
-    font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
     width: 50%; /* Set width */
     margin: 0 auto; /* Center header */
-    font-size: 22pt;
+    display: flex;
+
 }
 
 header h1 {
-  text-shadow:
+    text-shadow:
     3px 3px 0 #000,
     -3px 3px 0 #000,
     -3px -3px 0 #000,
     3px -3px 0 #000;
+    color: red;
+    font-size: 30pt;
 }
+
+header img {
+  
+}
+
 
 /* Navigation Styling */
 nav {
