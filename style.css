@@ -1,6 +1,7 @@
 /* General Page Background */
 html {
-    background-color: black;
+    background-color: white;
+    scroll-behavior: smooth;
 }
 
 /* Header Section Styling */
@@ -14,7 +15,7 @@ header {
 
 /* Navigation Styling */
 nav {
-    color: white;
+    color: black;
     padding: 1rem;
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
     width: 50%; /* Set width to match header and main */
@@ -36,18 +37,14 @@ nav .nav-item:last-child {
     margin-right: 0; /* Remove margin from the last item */
 }
 
-nav a {
-    color: white; /* Set link color to white */
+nav li a {
+    color: black; /* Set link color to white */
     text-decoration: none; /* Remove underline if desired */
-}
-
-nav a:hover {
-    text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 /* Main Content Styling */
 main {
-    color: white;
+    color: black;
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
     width: 50%; /* Set width */
     margin: 0 auto; /* Center main content */
@@ -56,11 +53,20 @@ main {
 
 /* Footer Section Styling */
 footer {
-    color: white;
+    color: black;
     font-family: "Pixelify Sans", sans-serif; /* Correct font declaration */
     width: 50%; /* Set width */
     margin: 0 auto; /* Center footer */
     padding: 1rem; /* Optional padding */
+    display: flex;
+}
+
+footer a {
+  text-align: right;
+  display: flex;
+  padding: 1rem;
+  color: black;
+  text-decoration: none;
 }
 
 /* Custom Pixel Font Styling */
