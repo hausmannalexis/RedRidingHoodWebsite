@@ -13,6 +13,14 @@ header {
     font-size: 22pt;
 }
 
+header h1 {
+  text-shadow:
+    3px 3px 0 #000,
+    -3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000;
+}
+
 /* Navigation Styling */
 nav {
     color: black;
