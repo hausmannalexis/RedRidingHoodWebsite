@@ -78,6 +78,9 @@ hr {
   text-align: center;
 }
 
+h2  {
+  text-align: center;
+}
 
 ol {
   padding-top: 0.5em;
@@ -145,10 +148,14 @@ footer a {
   text-align: right;
 }
 
-footer address {
+address {
   padding: 1rem;
   color: black;
   text-align: center;
+}
+
+address p {
+  font-style: none;
 }
 
 /* Custom Pixel Font Styling */
