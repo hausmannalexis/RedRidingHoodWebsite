@@ -4,81 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedRidingHood Pentesting</title>
-    <link rel="stylesheet" href="style.css"> <!-- Adjusted to match your CSS file name -->
+    <link rel="stylesheet" href="style.css"> <!-- Adjust the path if needed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top"> <!-- Added id for back-to-top arrow -->
     <header>
-          <h1>RedRidingHood</h1>
-          <img src="C:\Users\hausmannale\Desktop\redridinghood.jpeg">Imagine Logo here</img>
+      <h1>RedRidingHood</h1>
+      <!-- Slider container -->
+      <div id="mode-toggle-slider" class="slider-container">
+          <div class="slider-background"></div>
+          <div class="slider-thumb"></div>
+      </div>
     </header>
+
     <nav>
-        <ul class="nav-list"> <!-- Added <ul> for list structure -->
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="about.html">About</a></li>
-          <li class="nav-item"><a href="services.html">Services</a></li>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="services.html">Services</a></li>
         </ul>
     </nav>
+
     <main>
         <hr>
-      
-        <blockquote>
-           “There are only <strong>two</strong> different types of <strong>companies</strong> in the world: those that have been breached and know it and those that have been breached and don’t know it.”
-        </blockquote> 
+        <blockquote> “There are only <strong>two</strong> different types of <strong>companies</strong> in the world: those that have been breached and know it and those that have been breached and don’t know it.” </blockquote>
         <div class="Ted">Ted Schlein</div>
-        
-        <hr>
-        
         <h2>Services</h2>
-        
         <ol>
-          <li>Pentesting (Red Teaming)</li>
-          <li>Bug Bounty Hunting</li>
-          <li>Cybersecurity Consulting</li>
+            <li>Pentesting (Red Teaming)</li>
+            <li>Bug Bounty Hunting</li>
+            <li>Cybersecurity Consulting</li>
         </ol>
-        
-        <div class="offer">
-          <a href="#">See all our Services</a>
-        </div>
-        
-        <hr>
-        
+        <div class="offer"><a href="#">See all our Services</a></div>
+
         <h2>Learning Material</h2>
-        
         <ul>
-          <li>Python CheatSheet</li>
-          <li>HTMl CheatSheet</li>
-          <li>CSS CheatSheet</li>
-          <li>PenTesting Framework for Linux</li>
+            <li>Python CheatSheet</li>
+            <li>HTML CheatSheet</li>
+            <li>CSS CheatSheet</li>
+            <li>PenTesting Framework for Linux</li>
         </ul>
-        
-        <div class="learning">
-          <a href="#">Start learning</a>
-        </div>
-        
-        <hr>
-        
+        <div class="learning"><a href="#">Start learning</a></div>
+
         <h2>About us</h2>
-        
-        <p>
-          Alexis Hausmann<br>
-          Bachelor of Science International Management ZHAW<br>
-          Cybersecurity Enthusiast and Advocate<br>
-          Github: #LINK
-        </p>
-        
-        <div class="about">
-          <a href="#">More about us</a>
-        </div>
-        
+        <p>Alexis Hausmann<br>Bachelor of Science International Management ZHAW<br>Cybersecurity Enthusiast and Advocate<br>Github: #LINK</p>
+        <div class="about"><a href="#">More about us</a></div>
         <hr>
     </main>
+
     <footer>
         <p>@RandomPolymath</p>
         <address>alexis.hausmann@gmx.ch<br>Salstrasse 65<br>8400 Winterthur</address>
-        <a href=#top>back to top</a>
+        <a href="#top"><img src="arrow.png" alt="Back to Top" class="back-to-top-img"></a> <!-- Back to Top -->
     </footer>
+
+    <script src="script.js"></script> <!-- Include script for dark mode toggle -->
 </body>
 </html>
