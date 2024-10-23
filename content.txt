@@ -28,6 +28,18 @@ Continuous Improvement: The threat landscape is always evolving, and so are we. 
 
 [Graphic: Client logos or testimonials slider]
 
+Learning Hub
+
+Empower Your Team with Knowledge
+
+In addition to our red teaming services, we believe in fostering a culture of continuous learning. Explore our Learning Hub, where you can access a collection of invaluable resources, including:
+
+Cheatsheets: Quick-reference guides for various cybersecurity tools and techniques.
+Python Tools: Essential scripts and utilities designed for pentesting and red teaming.
+Best Practices: Comprehensive articles on enhancing your security posture and resilience.
+
+[Call to Action Button: "Explore the Learning Hub"]
+
 Take Action Today
 
 Don’t wait for a cyber incident to expose your vulnerabilities. Secure your business’s future by scheduling a consultation with our experts. Let’s work together to build a resilient cybersecurity strategy that protects your organization.
