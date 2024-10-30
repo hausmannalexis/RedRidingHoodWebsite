@@ -48,3 +48,11 @@ Q: How does red teaming differ from penetration testing?
 A: Red teaming is broader, simulating real-world attacks across multiple vectors.
 
 [Red Teaming vs. Penetration Testing Comparison Table]
+
+
+
+
+
+1. Explain Red Teaming/Pentesting and why it is necessary
+2. About us, Kundenrezensionen, Stats and FAQ
+3. Contact us for a onboarding
