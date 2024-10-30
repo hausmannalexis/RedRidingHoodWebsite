@@ -1,31 +1,33 @@
-/* General Page Background */
 html {
+  scroll-behavior: smooth;
+}
+
+.websiteBody {
   background-color: white;
   scroll-behavior: smooth;
   font-family: "Pixelify Sans", sans-serif;
   color: black;
   transition: background-color 0.3s, color 0.3s;
+  width: 75%;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 20px;
 }
-
-/* Dark Mode */
-html.dark-mode {
+.websiteBody.dark-mode {
   background-color: black;
   color: white;
-  scroll-behavior: smooth;
-  font-family: "Pixelify Sans", sans-serif;
 }
 
-/* Header Section Styling */
-header {
-  width: 50%; /* Set width */
-  margin: 0 auto; /* Center header */
+.websiteHeader {
+  margin: 0 auto; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
+  width: 90%;
 }
 
-header h1 {
+.websiteTitle {
   text-shadow:
   3px 3px 0 #000,
   -3px 3px 0 #000,
@@ -35,104 +37,63 @@ header h1 {
   font-size: 50pt;
 }
 
-header img {
-  width: 200px;
-  height: auto;
-  margin-inline-start: 15px;
-}
-
-/* Dark mode adjustments for the header */
-html.dark-mode header h1 {
+.websiteBody.dark-mode .websiteTitle {
   text-shadow:
   3px 3px 0 white,
   -3px 3px 0 white,
   -3px -3px 0 white,
   3px -3px 0 white;
-  color: red;
-  font-size: 50pt;
 }
 
-html.dark-mode header img {
-  filter: brightness(0.8); /* Optional: Dim the logo for dark mode */
-}
-
-/* Slider container */
 .slider-container {
   position: relative;
   width: 80px;
-  height: 60px;
-  border-radius: 20px;
+  height: 40px;
   cursor: pointer;
-  margin-left: 15px;
 }
 
-/* Slider background for day-to-night transition */
 .slider-background {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  background-image: url('sun.png'); /* Day icon */
-  background-size: 60px auto;
+  background-image: url('full-moon.png');
+  background-size: 40px 40px;
   background-repeat: no-repeat;
   background-position: left;
   transition: background-image 0.5s ease;
 }
 
-
-
-/* When in dark mode, move the thumb to the right */
-html.dark-mode .slider-thumb {
-  left: 45px;
+.websiteBody.dark-mode .slider-background {
+  background-image: url('sun.png');
 }
 
-/* Change the background image to night mode when dark mode is active */
-html.dark-mode .slider-background {
-  background-image: url('full-moon.png'); /* Night icon */
+.navList ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
-
-/* Navigation Styling */
-nav {
-  width: 50%; /* Set width to match header and main */
-  margin: 0 auto; /* Center the nav */
+.navItem {
+  margin-right: 20px;
 }
 
-nav .nav-list {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  display: flex; /* Use flexbox to align items */
+.navItem:last-child {
+  margin-right: 0;
 }
 
-nav .nav-item {
-  margin-right: 20px; /* Space between items */
-}
-
-nav .nav-item:last-child {
-  margin-right: 0; /* Remove margin from the last item */
-}
-
-nav li a {
-  color: inherit; /* Link color adapts to light/dark mode */
-  text-decoration: none; /* Remove underline */
+.navItem a {
+  color: inherit;
+  text-decoration: none;
   font-size: 20pt;
-}
-
-/* Main Content Styling */
-main {
-  color: inherit; /* Adapt text color to light/dark mode */
-  width: 50%; /* Set width */
-  margin: 0 auto; /* Center main content */
-  padding: 1rem; /* Optional padding */
 }
 
 blockquote {
   font-size: 20px;
-}
-
-main p {
-  font-size: 20px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 hr {
@@ -144,17 +105,16 @@ hr {
   text-align: center;
 }
 
-h2 {
+.servicesTitle, .learningTitle, .aboutTitle {
   font-size: 30pt;
   text-align: center;
 }
 
-ol {
+.servicesList, .learningList {
   padding-top: 0.5em;
   font-size: 20px;
 }
 
-/* Repeated box styling for offer, learning, and about sections */
 .offer, .learning, .about {
   outline: 3px dotted black;
   text-align: center;
@@ -164,75 +124,223 @@ ol {
   margin: 2rem 0;
 }
 
-/* Dark mode adjustments for sections */
-html.dark-mode .offer, 
-html.dark-mode .learning, 
-html.dark-mode .about {
+.websiteBody.dark-mode .offer, 
+.websiteBody.dark-mode .learning, 
+.websiteBody.dark-mode .about {
   background-color: white;
   color: black;
+  outline: 3px dotted white;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 0;
 }
 
-/* Offer, learning, and about links */
 .offer a, .learning a, .about a {
   text-decoration: none;
-  color: inherit; /* Adapt to light or dark mode */
+  color: inherit;
 }
 
-/* Footer Section Styling */
-footer {
-  color: inherit; /* Adapt text color to light/dark mode */
-  width: 25%;
-  margin: 0 auto; /* Center footer */
+.websiteFooter {
+  color: inherit;
+  width: 100%; 
+  margin: 0 auto;
   padding: 1rem;
-  display: flex;
-  font-style: normal;
+  text-align: center;
   position: relative;
 }
 
-footer p {
+.socialTag {
   position: relative;
-  text-align: left;
 }
 
 .back-to-top-img {
-  position: absolute; /* Allows positioning in relation to the footer */
-  bottom: 50px; /* Distance from the bottom of the footer */
-  right: 50px;  /* Distance from the right edge of the footer */
-  width: 20px; /* Adjust the size of the image */
+  content: url('arrow.png');
+  position: absolute;
+  bottom: 3rem; 
+  right: 3rem;  
+  width: 40px; 
   height: auto;
 }
 
-address {
-  padding: 1rem;
-  color: inherit; /* Adapt text color to light/dark mode */
-  text-align: center;
-}
-
-address {
-  font-style: normal; /* Correct font-style */
-}
-
-/* Button styling for dark/light mode toggle */
-button#mode-toggle {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: black;
-  border-radius: 5px;
+.websiteBody.dark-mode .back-to-top-img {
+  content: url(whitearrow.png);
   background-color: white;
-  color: black;
-  transition: background-color 0.3s;
-  margin-left: 15px;
 }
 
-button#mode-toggle:hover {
-  background-color: black;
+.impressum {
+  padding: 1rem;
+  color: inherit;
+  text-align: center;
+  font-style: normal;
 }
 
-/* Custom Pixel Font Styling */
+
 .pixelify-sans-Pixel {
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-container {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border: 8px solid; /* Thick border for pixelated effect */
+  border-image: url('https://i.imgur.com/UKxBb8U.png') 30; /* Pixelated border image */
+  width: 350px;
+  text-align: center;
+}
+
+/* General Container Styling */
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Section Headings */
+.servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
+  font-size: 30pt;
+  text-align: center;
+  color: inherit;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* New Section Styling for Red Teaming Services */
+.redTeamingSection {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border: 3px dotted #000;
+  margin-bottom: 2rem;
+  color: inherit;
+}
+.websiteBody.dark-mode .redTeamingSection {
+  background-color: #333;
+  border-color: #fff;
+}
+
+.redTeamingList {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.redTeamingList li {
+  margin-bottom: 0.5rem;
+}
+
+.redTeamingList .serviceHighlight {
+  font-weight: bold;
+}
+
+/* Graphic Placeholder Styling */
+.graphicPlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #888;
+  margin: 1.5rem 0;
+}
+.websiteBody.dark-mode .graphicPlaceholder {
+  background-color: #555;
+  color: #ccc;
+}
+
+/* FAQ Section Styling */
+.faqSection {
+  background-color: #f1f1f1;
+  padding: 2rem;
+  border: 3px dotted #000;
+  margin-bottom: 2rem;
+}
+.websiteBody.dark-mode .faqSection {
+  background-color: #222;
+  border-color: #fff;
+}
+
+.faqList {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.faqList li {
+  margin-bottom: 1rem;
+}
+
+.faqQuestion {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Subscription Form Styling */
+.subscriptionForm {
+  background-color: #333;
+  color: white;
+  padding: 1.5rem;
+  border: 3px dotted #000;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+.websiteBody.dark-mode .subscriptionForm {
+  background-color: #ccc;
+  color: black;
+  border-color: #fff;
+}
+
+.subscriptionForm input[type="email"] {
+  width: 80%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.subscriptionForm button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.subscriptionForm button:hover {
+  background-color: darkred;
+}
+
+/* CTA Button Styling */
+.ctaButton {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2rem 0;
+  border: 3px dotted #000;
+}
+.websiteBody.dark-mode .ctaButton {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+.ctaButton:hover {
+  background-color: darkred;
+  color: white;
 }
