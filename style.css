@@ -1,6 +1,7 @@
 /* Global Styles */
 html, body {
-  height: 80%;
+  height: 100%;
+  width: 80%;
   margin: 0;
   padding: 0;
   overflow: hidden;
