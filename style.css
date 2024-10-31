@@ -1,7 +1,6 @@
 /* Global Styles */
 html, body {
   height: 100%;
-  width: 80%;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -44,7 +43,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 50%;
   margin: 0 auto;
 }
 
