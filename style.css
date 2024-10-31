@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 h1, h2 {
@@ -19,9 +19,9 @@ p {
 .websiteBody {
   background-color: #f6f7f8;
   color: black;
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -33,17 +33,17 @@ p {
 /* Header Styles */
 .websiteHeader {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .websiteTitle a {
   font-family: "Pixelify Sans", sans-serif;
   color: red;
-  font-size: 50pt;
+  font-size: 36pt;
   text-decoration: none;
   text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
 }
@@ -81,22 +81,23 @@ p {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navItem {
-  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .navItem:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .navItem a {
   font-family: "Pixelify Sans", sans-serif;
   color: inherit;
   text-decoration: none;
-  font-size: 30pt;
+  font-size: 24pt;
 }
 
 /* Content Styles */
@@ -105,19 +106,19 @@ p {
   height: auto;
   display: inline-block;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .quotename {
-  font-size: 24px;
-  width: 60%;
+  font-size: 20px;
+  width: 90%;
   margin: 0 auto;
   padding: 1rem;
 }
 
 blockquote {
-  font-size: 20px;
-  width: 60%;
+  font-size: 18px;
+  width: 90%;
   margin: 0 auto;
   padding: 1rem;
   font-style: italic;
@@ -134,7 +135,7 @@ hr {
 
 /* Section Styles */
 .servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
-  font-size: 30pt;
+  font-size: 24pt;
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -142,7 +143,7 @@ hr {
 
 .servicesList, .learningList {
   padding-top: 0.5em;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .offer, .learning, .about {
@@ -151,7 +152,7 @@ hr {
   color: #f6f7f8;
   background-color: black;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .websiteBody.dark-mode .offer, 
@@ -175,21 +176,20 @@ hr {
   padding: 1rem;
   text-align: center;
   position: relative;
-  font-size: 20pt;
+  font-size: 18pt;
 }
 
 .socialTag {
   position: relative;
-    font-family: "Pixelify Sans", sans-serif;
-
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 .back-to-top-img {
   content: url('Pictures/arrow.png');
   position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  width: 40px;
+  bottom: 1rem;
+  right: 1rem;
+  width: 30px;
   height: auto;
 }
 
@@ -215,24 +215,23 @@ form {
   background-color: #f6f7f8;
   color: black;
   padding: 20px;
-  width: 350px;
+  width: 100%;
   text-align: center;
-  padding-left: 40%;
 }
 
 /* Main Container */
 main {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 /* Red Teaming Section */
 .redTeamingSection {
   background-color: #f6f7f8;
-  padding: 2rem;
+  padding: 1rem;
   border: 3px dotted #000;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .websiteBody.dark-mode .redTeamingSection {
@@ -241,7 +240,7 @@ main {
 }
 
 .redTeamingList {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 1rem 0;
   padding-left: 1rem;
@@ -263,9 +262,9 @@ main {
 /* FAQ Section */
 .faqSection {
   background-color: #f6f7f8;
-  padding: 2rem;
+  padding: 1rem;
   border: 3px dotted #000;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .websiteBody.dark-mode .faqSection {
@@ -276,7 +275,7 @@ main {
 .faqList {
   list-style-type: none;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -286,18 +285,18 @@ main {
 
 .faqQuestion {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Subscription Form */
 .subscriptionForm {
   background-color: #333;
   color: #f6f7f8;
-  padding: 1.5rem;
+  padding: 1rem;
   border: 3px dotted #000;
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 18px;
+  margin-bottom: 1rem;
+  font-size: 16px;
 }
 
 .websiteBody.dark-mode .subscriptionForm {
@@ -307,10 +306,10 @@ main {
 }
 
 .subscriptionForm input[type="email"] {
-  width: 80%;
+  width: 90%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .subscriptionForm button {
@@ -319,7 +318,7 @@ main {
   border: none;
   padding: 0.7rem 1.5rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .subscriptionForm button:hover {
@@ -330,9 +329,9 @@ main {
 .ctaButton {
   background-color: #f6f7f8;
   color: black;
-  padding: 1rem;
+  padding: 0.8rem;
   display: inline-block;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   margin: 1rem 0;
@@ -349,4 +348,129 @@ main {
   background-color: black;
   color: #f6f7f8;
   border: 3px dotted white;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .websiteBody {
+    width: 90%;
+  }
+
+  .websiteHeader {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .websiteTitle a {
+    font-size: 42pt;
+  }
+
+  .navList ul {
+    flex-direction: row;
+  }
+
+  .navItem {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .navItem a {
+    font-size: 26pt;
+  }
+
+  .quotename, blockquote {
+    width: 80%;
+  }
+
+  .form-container {
+    width: 80%;
+    padding-left: 10%;
+  }
+
+  .back-to-top-img {
+    bottom: 2rem;
+    right: 2rem;
+    width: 35px;
+  }
+
+  main {
+    padding: 1.5rem 0;
+  }
+
+  .redTeamingSection, .faqSection {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .subscriptionForm {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaButton {
+    font-size: 15px;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  .websiteBody {
+    width: 75%;
+    padding: 1rem;
+  }
+
+  .websiteTitle a {
+    font-size: 50pt;
+  }
+
+  .navItem a {
+    font-size: 30pt;
+  }
+
+  .graphic {
+    padding: 2rem;
+  }
+
+  .quotename, blockquote {
+    width: 60%;
+  }
+
+  .form-container {
+    width: 350px;
+    padding-left: 40%;
+  }
+
+  .back-to-top-img {
+    bottom: 3rem;
+    right: 3rem;
+    width: 40px;
+  }
+
+  main {
+    width: 90%;
+    padding: 2rem 0;
+  }
+
+  .redTeamingSection, .faqSection {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .subscriptionForm {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .ctaButton {
+    padding: 1rem;
+    font-size: 16px;
+  }
 }
