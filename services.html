@@ -4,35 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedRidingHood Pentesting</title>
-    <link rel="stylesheet" href="style.css"> <!-- Adjusted to match your CSS file name -->
+    <link rel="stylesheet" href="style.css"> <!-- Adjust the path if needed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-          <h1>RedRidingHood</h1>
-          <img src="C:\Users\hausmannale\Desktop\redridinghood.jpeg">Imagine Logo here</img>
+<body id="top" class="websiteBody">
+    <header class="websiteHeader">
+        <h1 class="websiteTitle"><a href="index.html">RedRidingHood</a></h1>
+        <div id="mode-toggle-slider" class="slider-container">
+            <div class="slider-background"></div>
+            <div class="slider-thumb"></div>
+        </div>
     </header>
-    <nav>
-        <ul class="nav-list"> <!-- Added <ul> for list structure -->
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="about.html">About</a></li>
-          <li class="nav-item"><a href="services.html">Services</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h2>What we do:</h2>
+
+    <nav class="navList">
+        <hr>
         <ul>
-          <li>Pentesting</li>
-          <li>Bug Bounty</li>
-          <li></li>
+            <li class="navItem"><a href="index.html">Home</a></li>
+            <li class="navItem"><a href="about.html">About</a></li>
+            <li class="navItem"><a href="services.html">Services</a></li>
+            <li class="navItem"><a href="learning.html">Learning</a></li>
+            <li class="navItem"><a href="contact.html">Contact Us</a></li>
         </ul>
+        <hr>
+    </nav>
+    
+    <main>
+      <h2>Pentesting (Red Teaming)</h2>
+      <p>Penetration testing, also called pen testing, is a cyberattack simulation launched on your computer system. The simulation helps discover points of exploitation and test 
+        IT breach security. By doing consistent pen testing, businesses can obtain expert, unbiased third-party feedback on their security processes. 
+        Though potentially time-consuming and costly, pen testing can help prevent extremely expensive and damaging breaches. When it comes to cyberattacks, it’s best to be prepared. 
+        Your organization’s confidential information is valuable to malicious users, and an attacker will go to great lengths to exploit a system. Red teaming helps prepare 
+        your cybersecurity team for sophisticated attacks by simulating real-world techniques so your team can identify vulnerabilities in your system and practice response methods.</p>
+      <h2>Bug Bounty Hunting</h2>
+      <p>A bug bounty is a monetary reward given to ethical hackers for successfully discovering and reporting a vulnerability or bug to the application's developer. 
+        Bug bounty programs allow companies to leverage the hacker community to improve their systems’ security posture over time continuously. Hackers around the world hunt bugs and, 
+        in some cases, earn full-time incomes. Bounty programs attract a wide range of hackers with varying skill sets and expertise giving businesses an advantage over tests that may 
+        use less experienced security teams to identify vulnerabilities. Bounty programs often complement regular penetration testing and provide a way for organizations to test their 
+        applications’ security throughout their development life cycles.</p>
+      <h2>Cybersecurity Consulting</h2>
+      <p>Cybersecurity consulting is a professional service where experts in cybersecurity provide advice, guidance, and solutions to help organizations protect their systems, 
+        data, and networks from cyber threats. These consultants help businesses assess, improve, and maintain their security posture against cyberattacks like hacking, malware, 
+        data breaches, and other cyber incidents.</p>
     </main>
-    <footer>
-        <p>@RandomPolymath</p>
-        <address>alexis.hausmann@gmx.ch<br>Salstrasse 65<br>8400 Winterthur</address>
-        <a href=#top>back to top</a>
+
+    <footer class="websiteFooter">
+        <p class="socialTag">@RandomPolymath</p>
+        <address class="impressum">alexis.hausmann@gmx.ch<br>Salstrasse 65<br>8400 Winterthur</address>
+        <a href="#top"><img src="" alt="Back to Top" class="back-to-top-img"></a>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
