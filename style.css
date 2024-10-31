@@ -38,7 +38,7 @@ p {
 .websiteHeader {
   position: sticky;
   top: 0;
-  z-index: 500;
+  z-index: 250;
   background-color: inherit;
   display: flex;
   flex-direction: column;
@@ -186,7 +186,7 @@ hr {
 .websiteFooter {
   position: sticky;
   bottom: 0;
-  z-index: 500;
+  z-index: 250;
   background-color: inherit;
   font-family: "Pixelify Sans", sans-serif;
   width: 100%;
