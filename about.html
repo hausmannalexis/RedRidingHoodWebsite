@@ -4,32 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedRidingHood Pentesting</title>
-    <link rel="stylesheet" href="style.css"> <!-- Adjusted to match your CSS file name -->
+    <link rel="stylesheet" href="style.css"> <!-- Adjust the path if needed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-          <h1>RedRidingHood</h1>
-          <img src="C:\Users\hausmannale\Desktop\redridinghood.jpeg">Imagine Logo here</img>
+<body id="top" class="websiteBody">
+    <header class="websiteHeader">
+        <h1 class="websiteTitle"><a href="index.html">RedRidingHood</a></h1>
+        <div id="mode-toggle-slider" class="slider-container">
+            <div class="slider-background"></div>
+            <div class="slider-thumb"></div>
+        </div>
     </header>
-    <nav>
-        <ul class="nav-list"> <!-- Added <ul> for list structure -->
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="about.html">About</a></li>
-          <li class="nav-item"><a href="services.html">Services</a></li>
+
+    <nav class="navList">
+        <hr>
+        <ul>
+            <li class="navItem"><a href="index.html">Home</a></li>
+            <li class="navItem"><a href="about.html">About</a></li>
+            <li class="navItem"><a href="services.html">Services</a></li>
+            <li class="navItem"><a href="learning.html">Learning</a></li>
+            <li class="navItem"><a href="contact.html">Contact Us</a></li>
         </ul>
+        <hr>
     </nav>
+    
     <main>
         <h2>About RedRidingHood</h2>
         <p>Lorem Ipsum</p>
         <p>Some more text here.</p>
     </main>
-    <footer>
-        <p>@RandomPolymath</p>
-        <address>alexis.hausmann@gmx.ch<br>Salstrasse 65<br>8400 Winterthur</address>
-        <a href=#top>back to top</a>
+
+    <footer class="websiteFooter">
+        <p class="socialTag">@RandomPolymath</p>
+        <address class="impressum">alexis.hausmann@gmx.ch<br>Salstrasse 65<br>8400 Winterthur</address>
+        <a href="#top"><img src="" alt="Back to Top" class="back-to-top-img"></a>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
