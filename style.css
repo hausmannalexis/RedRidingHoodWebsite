@@ -431,6 +431,7 @@ form {
 
   .websiteHeader {
     padding: 1rem 12.5%;
+    width: 80%;
   }
 
   .websiteTitle a {
