@@ -1,51 +1,58 @@
+/* Global Styles */
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Main Website Body */
 .websiteBody {
   background-color: #f6f7f8;
-  scroll-behavior: smooth;
-  font-family: "Pixelify Sans", sans-serif;
   color: black;
-  transition: background-color 0.3s, color 0.3s;
   width: 75%;
   margin: 0 auto;
   padding: 1rem;
-  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 .websiteBody.dark-mode {
   background-color: black;
   color: #f6f7f8;
 }
 
+/* Header Styles */
 .websiteHeader {
-  margin: 0 auto; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 20px;
   width: 90%;
+  margin: 0 auto;
 }
 
 .websiteTitle a {
-  text-shadow:
-  3px 3px 0 #000,
-  -3px 3px 0 #000,
-  -3px -3px 0 #000,
-  3px -3px 0 #000;
+  font-family: "Pixelify Sans", sans-serif;
   color: red;
   font-size: 50pt;
   text-decoration: none;
+  text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
 }
 
 .websiteBody.dark-mode .websiteTitle a {
-  text-shadow:
-  3px 3px 0 #f6f7f8,
-  -3px 3px 0 #f6f7f8,
-  -3px -3px 0 #f6f7f8,
-  3px -3px 0 #f6f7f8;
+  text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
 }
 
+/* Dark Mode Slider */
 .slider-container {
   position: relative;
   width: 80px;
@@ -68,6 +75,7 @@ html {
   background-image: url('Pictures/sun.png');
 }
 
+/* Navigation Styles */
 .navList ul {
   list-style-type: none;
   padding: 0;
@@ -85,16 +93,17 @@ html {
 }
 
 .navItem a {
+  font-family: "Pixelify Sans", sans-serif;
   color: inherit;
   text-decoration: none;
   font-size: 30pt;
 }
 
+/* Content Styles */
 .graphic {
   width: 100%;
   height: auto;
   display: inline-block;
-  align-content: center;
   text-align: center;
   padding: 2rem;
 }
@@ -104,7 +113,6 @@ html {
   width: 60%;
   margin: 0 auto;
   padding: 1rem;
-  font-style: none;
 }
 
 blockquote {
@@ -124,9 +132,12 @@ hr {
   text-align: center;
 }
 
-.servicesTitle, .learningTitle, .aboutTitle {
+/* Section Styles */
+.servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
   font-size: 30pt;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .servicesList, .learningList {
@@ -149,9 +160,6 @@ hr {
   background-color: #f6f7f8;
   color: black;
   outline: 3px dotted #f6f7f8;
-  text-align: center;
-  padding: 1rem;
-  margin: 2rem 0;
 }
 
 .offer a, .learning a, .about a {
@@ -159,9 +167,10 @@ hr {
   color: inherit;
 }
 
+/* Footer Styles */
 .websiteFooter {
-  color: inherit;
-  width: 100%; 
+  font-family: "Pixelify Sans", sans-serif;
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
@@ -176,9 +185,9 @@ hr {
 .back-to-top-img {
   content: url('Pictures/arrow.png');
   position: absolute;
-  bottom: 3rem; 
-  right: 3rem;  
-  width: 40px; 
+  bottom: 3rem;
+  right: 3rem;
+  width: 40px;
   height: auto;
 }
 
@@ -189,19 +198,11 @@ hr {
 
 .impressum {
   padding: 1rem;
-  color: inherit;
   text-align: center;
   font-style: normal;
 }
 
-
-.pixelify-sans-Pixel {
-  font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
+/* Form Styles */
 form {
   display: flex;
   flex-direction: column;
@@ -217,30 +218,21 @@ form {
   padding-left: 40%;
 }
 
-/* General Container Styling */
+/* Main Container */
 main {
   width: 90%;
   margin: 0 auto;
   padding: 2rem 0;
 }
 
-/* Section Headings */
-.servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
-  font-size: 30pt;
-  text-align: center;
-  color: inherit;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* New Section Styling for Red Teaming Services */
+/* Red Teaming Section */
 .redTeamingSection {
   background-color: #f6f7f8;
   padding: 2rem;
   border: 3px dotted #000;
   margin-bottom: 2rem;
-  color: inherit;
 }
+
 .websiteBody.dark-mode .redTeamingSection {
   background-color: #333;
   border-color: #f6f7f8;
@@ -266,13 +258,14 @@ main {
   color: #f6f7f8;
 }
 
-/* FAQ Section Styling */
+/* FAQ Section */
 .faqSection {
   background-color: #f6f7f8;
   padding: 2rem;
   border: 3px dotted #000;
   margin-bottom: 2rem;
 }
+
 .websiteBody.dark-mode .faqSection {
   background-color: #222;
   border-color: #f6f7f8;
@@ -294,7 +287,7 @@ main {
   font-size: 20px;
 }
 
-/* Subscription Form Styling */
+/* Subscription Form */
 .subscriptionForm {
   background-color: #333;
   color: #f6f7f8;
@@ -304,6 +297,7 @@ main {
   margin-bottom: 2rem;
   font-size: 18px;
 }
+
 .websiteBody.dark-mode .subscriptionForm {
   background-color: #f6f7f8;
   color: black;
@@ -330,24 +324,27 @@ main {
   background-color: darkred;
 }
 
-/* CTA Button Styling */
+/* CTA Button */
 .ctaButton {
-  background-color: black;
-  color: #f6f7f8;
+  background-color: #f6f7f8;
+  color: black;
   padding: 1rem;
   display: inline-block;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   text-decoration: none;
-  margin: 2rem 0;
-  border: 3px dotted #000;
+  margin: 1rem 0;
+  border: 3px dotted black;
 }
+
 .websiteBody.dark-mode .ctaButton {
   background-color: #f6f7f8;
   color: black;
   border-color: #f6f7f8;
 }
+
 .ctaButton:hover {
-  background-color: darkred;
+  background-color: black;
   color: #f6f7f8;
+  border: 3px dotted white;
 }
