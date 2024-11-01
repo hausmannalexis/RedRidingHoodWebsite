@@ -3,381 +3,657 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
-  font-size: 16px;
+  overflow-x: hidden;
 }
 
 h1, h2 {
   font-family: "Pixelify Sans", sans-serif;
 }
 
-p {
-  font-family: "Open Sans", sans-serif;
-}
+/* Phone Styles (0px - 767px) */
+@media screen and (max-width: 767px) {
+  .websiteBody {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f6f7f8;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+  }
 
-/* Main Website Body */
-.websiteBody {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #f6f7f8;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.websiteBody.dark-mode {
-  background-color: black;
-  color: #f6f7f8;
-}
-
-/* Header Styles */
-.websiteHeader {
-  position: sticky;
-  top: 0;
-  z-index: 250;
-  background-color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.websiteTitle a {
-  font-family: "Pixelify Sans", sans-serif;
-  color: red;
-  font-size: 36pt;
-  text-decoration: none;
-  text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
-}
-
-.websiteBody.dark-mode .websiteTitle a {
-  text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
-}
-
-/* Dark Mode Slider */
-.slider-container {
-  position: relative;
-  width: 80px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.slider-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('Pictures/full-moon.png');
-  background-size: 40px 40px;
-  background-repeat: no-repeat;
-  background-position: left;
-  transition: background-image 0.5s ease;
-}
-
-.websiteBody.dark-mode .slider-background {
-  background-image: url('Pictures/sun.png');
-}
-
-/* Navigation Styles */
-.navList ul {
-  list-style-type: none;
-  padding-left: 1rem;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.navItem {
-  margin-bottom: 10px;
-}
-
-.navItem:last-child {
-  margin-bottom: 0;
-}
-
-.navItem a {
-  font-family: "Pixelify Sans", sans-serif;
-  color: inherit;
-  text-decoration: none;
-  font-size: 24pt;
-}
-
-/* Main Content */
-main {
-  flex: 1;
-  overflow-y: auto;
-  padding: 1rem;
-}
-
-/* Content Styles */
-.graphic {
-  width: 100%;
-  height: auto;
-  display: inline-block;
-  text-align: center;
-  padding: 1rem;
-}
-
-.quotename {
-  font-size: 20px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-blockquote {
-  font-size: 18px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem;
-  font-style: italic;
-}
-
-hr {
-  height: 2px;
-  background-color: black;
-}
-
-.Ted {
-  text-align: center;
-}
-
-/* Section Styles */
-.servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.servicesList, .learningList {
-  padding-top: 0.5em;
-  font-size: 18px;
-}
-
-.offer, .learning, .about {
-  outline: 3px dotted black;
-  text-align: center;
-  color: #f6f7f8;
-  background-color: black;
-  padding: 1rem;
-  margin: 1rem 0;
-}
-
-.websiteBody.dark-mode .offer, 
-.websiteBody.dark-mode .learning, 
-.websiteBody.dark-mode .about {
-  background-color: #f6f7f8;
-  color: black;
-  outline: 3px dotted #f6f7f8;
-}
-
-.offer a, .learning a, .about a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Footer Styles */
-.websiteFooter {
-  position: sticky;
-  bottom: 0;
-  z-index: 250;
-  background-color: inherit;
-  font-family: "Pixelify Sans", sans-serif;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 18pt;
-}
-
-.socialTag {
-  position: relative;
-  font-family: "Pixelify Sans", sans-serif;
-}
-
-.back-to-top-img {
-  content: url('Pictures/arrow.png');
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  width: 30px;
-  height: auto;
-}
-
-.websiteBody.dark-mode .back-to-top-img {
-  content: url('Pictures/whitearrow.png');
-  background-color: #f6f7f8;
-}
-
-.impressum {
-  padding: 1rem;
-  text-align: center;
-  font-style: normal;
-}
-
-/* Form Styles */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-container {
-  background-color: #f6f7f8;
-  color: black;
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Red Teaming Section */
-.redTeamingSection {
-  background-color: #f6f7f8;
-  padding: 1rem;
-  border: 3px dotted #000;
-  margin-bottom: 1rem;
-}
-
-.websiteBody.dark-mode .redTeamingSection {
-  background-color: #333;
-  border-color: #f6f7f8;
-}
-
-.redTeamingList {
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 1rem 0;
-  padding-left: 1rem;
-}
-
-.redTeamingList li {
-  margin-bottom: 0.5rem;
-}
-
-.redTeamingList .serviceHighlight {
-  font-weight: bold;
-}
-
-.websiteBody.dark-mode .graphicPlaceholder {
-  background-color: #555;
-  color: #f6f7f8;
-}
-
-/* FAQ Section */
-.faqSection {
-  background-color: #f6f7f8;
-  padding: 1rem;
-  border: 3px dotted #000;
-  margin-bottom: 1rem;
-}
-
-.websiteBody.dark-mode .faqSection {
-  background-color: #222;
-  border-color: #f6f7f8;
-}
-
-.faqList {
-  list-style-type: none;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.faqList li {
-  margin-bottom: 1rem;
-}
-
-.faqQuestion {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-/* Subscription Form */
-.subscriptionForm {
-  background-color: #333;
-  color: #f6f7f8;
-  padding: 1rem;
-  border: 3px dotted #000;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 16px;
-}
-
-.websiteBody.dark-mode .subscriptionForm {
-  background-color: #f6f7f8;
-  color: black;
-  border-color: #f6f7f8;
-}
-
-.subscriptionForm input[type="email"] {
-  width: 90%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 14px;
-}
-
-.subscriptionForm button {
-  background-color: red;
-  color: #f6f7f8;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.subscriptionForm button:hover {
-  background-color: darkred;
-}
-
-/* CTA Button */
-.ctaButton {
-  background-color: #f6f7f8;
-  color: black;
-  padding: 0.8rem;
-  display: inline-block;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  margin: 1rem 0;
-  border: 3px dotted black;
-}
-
-.websiteBody.dark-mode .ctaButton {
-  background-color: #f6f7f8;
-  color: black;
-  border-color: #f6f7f8;
-}
-
-.ctaButton:hover {
-  background-color: black;
-  color: #f6f7f8;
-  border: 3px dotted white;
-}
-
-/* Tablet styles */
-@media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
+  .websiteBody.dark-mode {
+    background-color: #222;
+    color: #f6f7f8;
   }
 
   .websiteHeader {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 250;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .websiteTitle {
+    margin-bottom: 1rem;
   }
 
   .websiteTitle a {
-    font-size: 42pt;
+    font-family: "Pixelify Sans", sans-serif;
+    color: red;
+    font-size: 36pt;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
+  }
+
+  .websiteBody.dark-mode .websiteTitle a {
+    text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .slider-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Pictures/full-moon.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: background-image 0.5s ease;
+  }
+
+  .websiteBody.dark-mode .slider-background {
+    background-image: url('Pictures/sun.png');
+  }
+
+  .navList {
+    width: 100%;
   }
 
   .navList ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navItem {
+    margin-bottom: 10px;
+  }
+
+  .navItem:last-child {
+    margin-bottom: 0;
+  }
+
+  .navItem a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: inherit;
+    text-decoration: none;
+    font-size: 24pt;
+  }
+
+  main {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .graphic {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .quotename {
+    font-size: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  blockquote {
+    font-size: 18px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-style: italic;
+  }
+
+  hr {
+    height: 2px;
+    background-color: currentColor;
+    border: none;
+  }
+
+  .Ted {
+    text-align: center;
+  }
+
+  .servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
+    font-size: 24pt;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .servicesList, .learningList {
+    padding-top: 0.5em;
+    font-size: 18px;
+  }
+
+  .offer, .learning, .about {
+    outline: 3px dotted currentColor;
+    text-align: center;
+    color: #f6f7f8;
+    background-color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .websiteBody.dark-mode .offer, 
+  .websiteBody.dark-mode .learning, 
+  .websiteBody.dark-mode .about {
+    background-color: #f6f7f8;
+    color: black;
+  }
+
+  .offer a, .learning a, .about a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .websiteFooter {
+    background-color: inherit;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18pt;
+    padding: 1rem;
+  }
+
+  .socialTag {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .back-to-top-img {
+    content: url('Pictures/arrow.png');
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .websiteBody.dark-mode .back-to-top-img {
+    content: url('Pictures/whitearrow.png');
+  }
+
+  .impressum {
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-container {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .websiteBody.dark-mode .form-container {
+    background-color: #333;
+    color: #f6f7f8;
+  }
+
+  .redTeamingSection {
+    background-color: #f6f7f8;
+    padding: 1rem;
+    border: 3px dotted #000;
+    margin-bottom: 1rem;
+  }
+
+  .websiteBody.dark-mode .redTeamingSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .redTeamingList {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .redTeamingList li {
+    margin-bottom: 0.5rem;
+  }
+
+  .redTeamingList .serviceHighlight {
+    font-weight: bold;
+  }
+
+  .websiteBody.dark-mode .graphicPlaceholder {
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .faqSection {
+    background-color: #f6f7f8;
+    padding: 1rem;
+    border: 3px dotted #000;
+    margin-bottom: 1rem;
+  }
+
+  .websiteBody.dark-mode .faqSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .faqList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faqList li {
+    margin-bottom: 1rem;
+  }
+
+  .faqQuestion {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .subscriptionForm {
+    background-color: #333;
+    color: #f6f7f8;
+    padding: 1rem;
+    border: 3px dotted #000;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 16px;
+  }
+
+  .websiteBody.dark-mode .subscriptionForm {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+
+  .subscriptionForm input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button {
+    background-color: red;
+    color: #f6f7f8;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button:hover {
+    background-color: darkred;
+  }
+
+  .ctaButton {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 0.8rem;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 0;
+    border: 3px dotted black;
+  }
+
+  .websiteBody.dark-mode .ctaButton {
+    background-color: #333;
+    color: #f6f7f8;
+    border-color: #f6f7f8;
+  }
+
+  .ctaButton:hover {
+    background-color: black;
+    color: #f6f7f8;
+    border: 3px dotted white;
+  }
+
+  .websiteBody.dark-mode .ctaButton:hover {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+}
+
+/* Tablet Styles (768px - 1023px) continued */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .websiteBody.dark-mode .offer, 
+  .websiteBody.dark-mode .learning,
+  .websiteBody.dark-mode .about {
+    background-color: #f6f7f8;
+    color: black;
+  }
+
+  .offer a, .learning a, .about a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .websiteFooter {
+    background-color: inherit;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18pt;
+    padding: 1rem;
+  }
+
+  .socialTag {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .back-to-top-img {
+    content: url('Pictures/arrow.png');
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .websiteBody.dark-mode .back-to-top-img {
+    content: url('Pictures/whitearrow.png');
+  }
+
+  .impressum {
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-container {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .websiteBody.dark-mode .form-container {
+    background-color: #333;
+    color: #f6f7f8;
+  }
+
+  .redTeamingSection {
+    background-color: #f6f7f8;
+    padding: 1.5rem;
+    border: 3px dotted #000;
+    margin-bottom: 1.5rem;
+  }
+
+  .websiteBody.dark-mode .redTeamingSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .redTeamingList {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .redTeamingList li {
+    margin-bottom: 0.5rem;
+  }
+
+  .redTeamingList .serviceHighlight {
+    font-weight: bold;
+  }
+
+  .websiteBody.dark-mode .graphicPlaceholder {
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .faqSection {
+    background-color: #f6f7f8;
+    padding: 1.5rem;
+    border: 3px dotted #000;
+    margin-bottom: 1.5rem;
+  }
+
+  .websiteBody.dark-mode .faqSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .faqList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faqList li {
+    margin-bottom: 1rem;
+  }
+
+  .faqQuestion {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .subscriptionForm {
+    background-color: #333;
+    color: #f6f7f8;
+    padding: 1.25rem;
+    border: 3px dotted #000;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+  }
+
+  .websiteBody.dark-mode .subscriptionForm {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+
+  .subscriptionForm input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button {
+    background-color: red;
+    color: #f6f7f8;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button:hover {
+    background-color: darkred;
+  }
+
+  .ctaButton {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 0.8rem;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 0;
+    border: 3px dotted black;
+  }
+
+  .websiteBody.dark-mode .ctaButton {
+    background-color: #333;
+    color: #f6f7f8;
+    border-color: #f6f7f8;
+  }
+
+  .ctaButton:hover {
+    background-color: black;
+    color: #f6f7f8;
+    border: 3px dotted white;
+  }
+
+  .websiteBody.dark-mode .ctaButton:hover {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+}
+
+/* Desktop Styles (1024px and above) */
+@media screen and (min-width: 1024px) {
+  .websiteBody {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f6f7f8;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+  }
+
+  .websiteBody.dark-mode {
+    background-color: #222;
+    color: #f6f7f8;
+  }
+
+  .websiteHeader {
+    position: sticky;
+    top: 0;
+    z-index: 250;
+    background-color: inherit;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 12.5%;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+
+  .websiteTitle {
+    margin-bottom: 0;
+  }
+
+  .websiteTitle a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: red;
+    font-size: 50pt;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
+  }
+
+  .websiteBody.dark-mode .websiteTitle a {
+    text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+
+  .slider-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Pictures/full-moon.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: background-image 0.5s ease;
+  }
+
+  .websiteBody.dark-mode .slider-background {
+    background-image: url('Pictures/sun.png');
+  }
+
+  .navList {
+    width: auto;
+  }
+
+  .navList ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 12%;
+    margin: 0;
   }
 
   .navItem {
@@ -385,98 +661,247 @@ form {
     margin-bottom: 0;
   }
 
-  .navItem a {
-    font-size: 26pt;
-  }
-
-  main {
-    padding: 1.5rem 5%;
-  }
-
-  .quotename, blockquote {
-    width: 80%;
-  }
-
-  .form-container {
-    width: 80%;
-    padding-left: 10%;
-  }
-
-  .back-to-top-img {
-    bottom: 2rem;
-    right: 2rem;
-    width: 35px;
-  }
-
-  .redTeamingSection, .faqSection {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .subscriptionForm {
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .ctaButton {
-    font-size: 15px;
-  }
-}
-
-/* Desktop styles */
-@media screen and (min-width: 1024px) {
-  body {
-    font-size: 20px;
-  }
-
-  .websiteHeader {
-    padding: 1rem 12.5%;
-    width: 80%;
-  }
-
-  .websiteTitle a {
-    font-size: 50pt;
+  .navItem:last-child {
+    margin-right: 0;
   }
 
   .navItem a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: inherit;
+    text-decoration: none;
     font-size: 30pt;
   }
 
   main {
+    flex: 1;
     padding: 2rem 12.5%;
+    overflow-y: auto;
   }
 
   .graphic {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
     padding: 2rem;
   }
 
-  .quotename, blockquote {
+  .quotename {
+    font-size: 20px;
     width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
   }
 
-  .form-container {
-    width: 350px;
-    padding-left: 40%;
+  blockquote {
+    font-size: 18px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-style: italic;
+  }
+
+  hr {
+    height: 2px;
+    background-color: currentColor;
+    border: none;
+  }
+
+  .Ted {
+    text-align: center;
+  }
+
+  .servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
+    font-size: 24pt;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .servicesList, .learningList {
+    padding-top: 0.5em;
+    font-size: 18px;
+  }
+
+  .offer, .learning, .about {
+    outline: 3px dotted currentColor;
+    text-align: center;
+    color: #f6f7f8;
+    background-color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .websiteBody.dark-mode .offer, 
+  .websiteBody.dark-mode .learning, 
+  .websiteBody.dark-mode .about {
+    background-color: #f6f7f8;
+    color: black;
+  }
+
+  .offer a, .learning a, .about a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .websiteFooter {
+    background-color: inherit;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18pt;
+    padding: 1rem;
+    position: static;
+  }
+
+  .socialTag {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
   }
 
   .back-to-top-img {
+    content: url('Pictures/arrow.png');
+    position: fixed;
     bottom: 3rem;
     right: 3rem;
     width: 40px;
+    height: auto;
+    cursor: pointer;
   }
 
-  .redTeamingSection, .faqSection {
+  .websiteBody.dark-mode .back-to-top-img {
+    content: url('Pictures/whitearrow.png');
+  }
+
+  .impressum {
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-container {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .websiteBody.dark-mode .form-container {
+    background-color: #333;
+    color: #f6f7f8;
+  }
+
+  .redTeamingSection {
+    background-color: #f6f7f8;
     padding: 2rem;
+    border: 3px dotted #000;
     margin-bottom: 2rem;
+  }
+
+  .websiteBody.dark-mode .redTeamingSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .redTeamingList {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .redTeamingList li {
+    margin-bottom: 0.5rem;
+  }
+
+  .redTeamingList .serviceHighlight {
+    font-weight: bold;
+  }
+
+  .websiteBody.dark-mode .graphicPlaceholder {
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .faqSection {
+    background-color: #f6f7f8;
+    padding: 2rem;
+    border: 3px dotted #000;
+    margin-bottom: 2rem;
+  }
+
+  .websiteBody.dark-mode .faqSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .faqList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faqList li {
+    margin-bottom: 1rem;
+  }
+
+  .faqQuestion {
+    font-weight: bold;
+    font-size: 18px;
   }
 
   .subscriptionForm {
+    background-color: #333;
+    color: #f6f7f8;
     padding: 1.5rem;
+    border: 3px dotted #000;
+    text-align: center;
     margin-bottom: 2rem;
+    font-size: 16px;
+  }
+
+  .websiteBody.dark-mode .subscriptionForm {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+
+  .subscriptionForm input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button {
+    background-color: red;
+    color: #f6f7f8;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button:hover {
+    background-color: darkred;
   }
 
   .ctaButton {
+    background-color: #f6f7f8;
+    color: black;
     padding: 1rem;
+    display: inline-block;
     font-size: 16px;
-  }
-}
+    text-align: center;
+    text
