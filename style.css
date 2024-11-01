@@ -34,7 +34,6 @@ h1, h2 {
   }
 
   .websiteHeader {
-    position: sticky;
     top: 0;
     z-index: 250;
     background-color: inherit;
@@ -571,8 +570,6 @@ h1, h2 {
 /* Desktop Styles (1024px and above) */
 @media screen and (min-width: 1024px) {
   .websiteBody {
-    display: flex;
-    flex-direction: column;
     background-color: #f6f7f8;
     color: black;
     transition: background-color 0.3s, color 0.3s;
@@ -586,7 +583,6 @@ h1, h2 {
   }
 
   .websiteHeader {
-    position: sticky;
     padding: 2rem 12.5%;
     top: 0;
   }
