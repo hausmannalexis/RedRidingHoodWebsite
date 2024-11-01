@@ -904,4 +904,26 @@ h1, h2 {
     display: inline-block;
     font-size: 16px;
     text-align: center;
-    text
+    text-decoration: none;
+    margin: 1rem 0;
+    border: 3px dotted black;
+  }
+
+  .websiteBody.dark-mode .ctaButton {
+    background-color: #333;
+    color: #f6f7f8;
+    border-color: #f6f7f8;
+  }
+
+  .ctaButton:hover {
+    background-color: black;
+    color: #f6f7f8;
+    border: 3px dotted white;
+  }
+
+  .websiteBody.dark-mode .ctaButton:hover {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+}
