@@ -19,8 +19,6 @@ h1, h2 {
 /* Phone Styles (0px - 767px) */
 @media screen and (max-width: 767px) {
   .websiteBody {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     background-color: #f6f7f8;
     color: black;
@@ -36,7 +34,6 @@ h1, h2 {
   .websiteHeader {
     top: 0;
     z-index: 250;
-    background-color: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +66,7 @@ h1, h2 {
 
   .slider-container {
     position: relative;
-    width: 80px;
+    width: 40px;
     height: 40px;
     cursor: pointer;
     margin-top: 1rem;
@@ -569,12 +566,12 @@ h1, h2 {
 
 /* Desktop Styles (1024px and above) */
 @media screen and (min-width: 1024px) {
-  .websiteBody {
-    background-color: #f6f7f8;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 20px;
-    width: 100%;
+  .websiteHeader {
+    padding: 2rem 12.5%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .websiteBody.dark-mode {
@@ -582,18 +579,16 @@ h1, h2 {
     color: #f6f7f8;
   }
 
-  .websiteHeader {
-    padding: 2rem 12.5%;
-    top: 0;
-  }
-
   .header-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .websiteTitle {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
   .websiteTitle a {
@@ -639,12 +634,17 @@ h1, h2 {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding: 0;
     margin: 0;
   }
 
   .navItem {
-    margin-right: 20px;
-    margin-bottom: 0;
+    margin: 0 10px;
+  }
+
+  .navItem:first-child {
+    margin-left: 0;
   }
 
   .navItem:last-child {
@@ -749,7 +749,7 @@ h1, h2 {
     content: url('Pictures/arrow.png');
     position: fixed;
     bottom: 3rem;
-    right: 3rem;
+    left: 81%;
     width: 40px;
     height: auto;
     cursor: pointer;
