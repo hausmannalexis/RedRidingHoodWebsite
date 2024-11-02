@@ -144,12 +144,6 @@ h1, h2 {
     font-style: italic;
   }
 
-  hr {
-    height: 2px;
-    background-color: currentColor;
-    border: none;
-  }
-
   .Ted {
     text-align: center;
   }
@@ -686,11 +680,9 @@ h1, h2 {
     padding: 1rem;
     font-style: italic;
   }
-
+  
   hr {
-    height: 2px;
-    background-color: currentColor;
-    border: none;
+    width: 80%;
   }
 
   .Ted {
