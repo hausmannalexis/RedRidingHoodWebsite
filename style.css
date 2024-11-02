@@ -683,6 +683,14 @@ h1, h2 {
   
   hr {
     width: 80%;
+    border: none;
+    border-top: 4px dotted black;
+  }
+  
+  .websiteBody.dark-mode hr {
+    width: 80%;
+    border: none;
+    border-top: 4px dotted white;
   }
 
   .Ted {
