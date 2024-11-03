@@ -1,0 +1,95 @@
+Global Attributes
+These can be used on most HTML elements:
+
+    accesskey: Specifies a shortcut key to activate/focus an element1
+    .
+    class: Assigns one or more CSS class names to an element1
+    .
+    contenteditable: Indicates whether the element's content is editable1
+    .
+    data-*: Used to store custom data private to the page or application1
+    .
+    dir: Specifies the text direction for the content in an element1
+    .
+    draggable: Specifies whether an element is draggable1
+    .
+    hidden: Hides an element from view1
+    .
+    id: Provides a unique identifier for an element1
+    .
+    lang: Specifies the language of the element's content1
+    .
+    spellcheck: Indicates whether the element should have its spelling checked1
+    .
+    style: Specifies inline CSS styles for an element1
+    .
+    tabindex: Defines the tabbing order of an element1
+    .
+    title: Provides additional information about an element, often shown as a tooltip1
+    .
+
+Specific Element Attributes
+
+    accept (<input>): Specifies file types the server accepts (for file uploads)1
+    5
+    .
+    action (<form>): Specifies where to send form data when submitted1
+    5
+    .
+    alt (<img>, <area>, <input>): Provides alternative text for images1
+    5
+    .
+    autocomplete (<form>, <input>): Enables/disables form autocomplete1
+    .
+    autofocus (<button>, <input>, <select>, <textarea>): Automatically focuses the element when page loads1
+    .
+    charset (<meta>, <script>): Specifies the character encoding for the document1
+    5
+    .
+    checked (<input>): Indicates a pre-selected checkbox or radio button1
+    5
+    .
+    cols (<textarea>): Specifies the visible width of a textarea1
+    5
+    .
+    colspan (<td>, <th>): Specifies how many columns a table cell should span1
+    5
+    .
+    disabled (<button>, <fieldset>, <input>, <optgroup>, <option>, <select>, <textarea>): Disables the element1
+    .
+    for (<label>, <output>): Specifies which form element a label or output is bound to1
+    .
+    height (<canvas>, <embed>, <iframe>, <img>, <input>, <object>, <video>): Specifies the height of the element1
+    .
+    href (<a>, <area>, <base>, <link>): Specifies the URL of the linked resource1
+    5
+    .
+    max (<input>, <meter>, <progress>): Specifies the maximum value allowed1
+    .
+    min (<input>, <meter>): Specifies the minimum value allowed1
+    .
+    multiple (<input>, <select>): Allows multiple values to be selected1
+    .
+    name (<button>, <fieldset>, <form>, <iframe>, <input>, <map>, <meta>, <object>, <output>, <param>, <select>, <textarea>): Specifies the name of the element1
+    .
+    placeholder (<input>, <textarea>): Specifies a short hint that describes the expected value1
+    .
+    readonly (<input>, <textarea>): Specifies that an input field is read-only1
+    .
+    required (<input>, <select>, <textarea>): Specifies that the element must be filled out before submitting the form1
+    .
+    rows (<textarea>): Specifies the visible number of lines in a textarea1
+    .
+    selected (<option>): Specifies that an option should be pre-selected when the page loads1
+    5
+    .
+    src (<audio>, <embed>, <iframe>, <img>, <input>, <script>, <source>, <track>, <video>): Specifies the URL of the media file1
+    5
+    .
+    type (<button>, <input>, <command>, <embed>, <object>, <script>, <source>, <style>, <menu>): Specifies the type of element1
+    5
+    .
+    value (<button>, <input>, <li>, <option>, <meter>, <progress>, <param>): Specifies the value of the element1
+    .
+    width (<canvas>, <embed>, <iframe>, <img>, <input>, <object>, <video>): Specifies the width of the element1
+    .
