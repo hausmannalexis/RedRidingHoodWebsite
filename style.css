@@ -1,4 +1,3 @@
-
 /* Global Styles */
 html, body {
   height: 100%;
@@ -581,16 +580,16 @@ h1, h2 {
   }
 
   .websiteTitle {
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     text-align: center;
   }
 
   .websiteTitle a {
     font-family: "Pixelify Sans", sans-serif;
     color: red;
-    font-size: 50pt;
+    font-size: 80pt;
     text-decoration: none;
-    text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
+    text-shadow: 5px 5px 0 #000, -5px 5px 0 #000, -5px -5px 0 #000, 5px -5px 0 #000;
   }
 
   .websiteBody.dark-mode .websiteTitle a {
@@ -691,6 +690,10 @@ h1, h2 {
     width: 80%;
     border: none;
     border-top: 4px dotted white;
+  }
+  
+  main hr {
+    width: 100%;
   }
 
   .Ted {
@@ -883,7 +886,7 @@ h1, h2 {
   }
 
   .ctaButton {
-    background-color: #f6f7f8;
+    background-color: white;
     color: black;
     padding: 1rem;
     display: inline-block;
@@ -892,6 +895,7 @@ h1, h2 {
     text-decoration: none;
     margin: 1rem 0;
     border: 3px dotted black;
+    font-family: "Pixelify Sans", sans-serif;
   }
 
   .websiteBody.dark-mode .ctaButton {
