@@ -1,110 +1,965 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedRidingHood Pentesting</title>
-    <link rel="stylesheet" href="style.css"> <!-- Adjust the path if needed -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
-</head>
-<body id="top" class="websiteBody">
-    <header class="websiteHeader">
-        <div class="header-content">
-            <h1 class="websiteTitle"><a href="index.html">RedRidingHood</a></h1>
-        <div id="mode-toggle-slider" class="slider-container">
-            <div class="slider-background"></div>
-            <div class="slider-thumb"></div>
-        </div>
-        <nav class="navList">
-            <ul>
-              <li class="navItem"><a href="index.html">Home</a></li>
-              <li class="navItem"><a href="about.html">About</a></li>
-              <li class="navItem"><a href="services.html">Services</a></li>
-              <li class="navItem"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        </div>
-    </header>
-    <hr>
-    
-    <main>
-    <h1>Protect those who trust you</h1>
-    <p>With regular Penetration Testing and other techniques you can ensure that data
-    vital to you is well protected.</p>
-    
-    <section>
-        <ul>
-            <li><strong>43%</strong> of cyber attacks target <strong>small businesses</strong></li>
-            <li>Average data breach cost: <strong>$3.86 million</strong></li>
-            <li><strong>60%</strong> of small businesses close within 6 months of an attack</li>
-        </ul>
-    </section>
 
-    <section>
-        <h2>What do we offer?</h2>
-        <ul>
-            <li>Network Penetration Testing</li>
-            <li>Web Penetration Testing</li>
-            <li>Social Engineering Attacks</li>
-            <li>Physical Intrusion Testing</li>
-        </ul>
-    </section>
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Pixelify Sans", sans-serif;
+  width: 100%;
+}
 
-    <section>
-        <h2>What do we bring to the table?</h2>
-        <ul>
-            <li>Offensive security professionals</li>
-            <li>Actionable, prioritized recommendations</li>
-            <li>Thorough & full-scale security assesments for small and medium business</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Learning resources</h2>
-        <p>Access our curated resources:</p>
-        <ul>
-            <li>Cheatsheets</li>
-            <li>Custom Python tools</li>
-            <li>Cybersecurity best practices</li>
-        </ul>
-        <button class="ctaButton">Explore Learning Hub</button>
-    </section>
-    <hr>
-    <section>
-        <h2>Contact us</h2>
-        <p>Do not wait until it is too late, schedule a free consultation now.</p>
-        <button class="ctaButton">Schedule Free Consultation</button>
-    </section>
-    <hr>
-    <section>
-        <h2>Stay Informed</h2>
-        <p>Subscribe for expert cybersecurity insights.</p>
-        <form>
-            <!-- Add email subscription form here -->
-        </form>
-    </section>
+body {
+  overflow-x: hidden;
+}
 
-    <section>
-        <h2>FAQs</h2>
-        <dl>
-            <dt>Q: How often should we conduct red teaming?</dt>
-            <dd>A: Annually or after significant IT changes.</dd>
-            <dt>Q: How does red teaming differ from penetration testing?</dt>
-            <dd>A: Red teaming is broader, simulating real-world attacks across multiple vectors.</dd>
-        </dl>
-        <!-- Add Red Teaming vs. Penetration Testing Comparison Table here -->
-    </section>
-    </main>
+h1, h2 {
+  font-family: "Pixelify Sans", sans-serif;
+}
 
-    <hr>
-    <footer class="websiteFooter">
-        <p class="socialTag">@RandomPolymath</p>
-        <address class="impressum">alexis.hausmann@gmx.ch<br>Salstrasse 65<br>8400 Winterthur</address>
-        <a href="#top"><img src="Pictures/arrow.png" alt="Back to Top" class="back-to-top-img"></a>
-    </footer>
+/* Phone Styles (0px - 767px) */
+@media screen and (max-width: 767px) {
+  .websiteBody {
+    min-height: 100vh;
+    background-color: #f6f7f8;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+  }
 
-    <script src="script.js"></script>
-</body>
-</html>
+  .websiteBody.dark-mode {
+    background-color: #222;
+    color: #f6f7f8;
+  }
+
+  .websiteHeader {
+    top: 0;
+    z-index: 250;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .websiteTitle {
+    margin-bottom: 1rem;
+  }
+
+  .websiteTitle a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: red;
+    font-size: 36pt;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
+  }
+
+  .websiteBody.dark-mode .websiteTitle a {
+    text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .slider-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Pictures/full-moon.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: background-image 0.5s ease;
+  }
+
+  .websiteBody.dark-mode .slider-background {
+    background-image: url('Pictures/sun.png');
+  }
+
+  .navList {
+    width: 100%;
+  }
+
+  .navList ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navItem {
+    margin-bottom: 10px;
+  }
+
+  .navItem:last-child {
+    margin-bottom: 0;
+  }
+
+  .navItem a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: inherit;
+    text-decoration: none;
+    font-size: 24pt;
+  }
+
+  main {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .graphic {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .quotename {
+    font-size: 20px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  blockquote {
+    font-size: 18px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-style: italic;
+  }
+
+  .Ted {
+    text-align: center;
+  }
+
+  .servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
+    font-size: 24pt;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .servicesList, .learningList {
+    padding-top: 0.5em;
+    font-size: 18px;
+  }
+
+  .offer, .learning, .about {
+    outline: 3px dotted currentColor;
+    text-align: center;
+    color: #f6f7f8;
+    background-color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .websiteBody.dark-mode .offer, 
+  .websiteBody.dark-mode .learning, 
+  .websiteBody.dark-mode .about {
+    background-color: #f6f7f8;
+    color: black;
+  }
+
+  .offer a, .learning a, .about a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .websiteFooter {
+    background-color: inherit;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18pt;
+    padding: 1rem;
+  }
+
+  .socialTag {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .back-to-top-img {
+    content: url('Pictures/arrow.png');
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .websiteBody.dark-mode .back-to-top-img {
+    content: url('Pictures/whitearrow.png');
+  }
+
+  .impressum {
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-container {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .websiteBody.dark-mode .form-container {
+    background-color: #333;
+    color: #f6f7f8;
+  }
+
+  .redTeamingSection {
+    background-color: #f6f7f8;
+    padding: 1rem;
+    border: 3px dotted #000;
+    margin-bottom: 1rem;
+  }
+
+  .websiteBody.dark-mode .redTeamingSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .redTeamingList {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .redTeamingList li {
+    margin-bottom: 0.5rem;
+  }
+
+  .redTeamingList .serviceHighlight {
+    font-weight: bold;
+  }
+
+  .websiteBody.dark-mode .graphicPlaceholder {
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .faqSection {
+    background-color: #f6f7f8;
+    padding: 1rem;
+    border: 3px dotted #000;
+    margin-bottom: 1rem;
+  }
+
+  .websiteBody.dark-mode .faqSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .faqList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faqList li {
+    margin-bottom: 1rem;
+  }
+
+  .faqQuestion {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .subscriptionForm {
+    background-color: #333;
+    color: #f6f7f8;
+    padding: 1rem;
+    border: 3px dotted #000;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 16px;
+  }
+
+  .websiteBody.dark-mode .subscriptionForm {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+
+  .subscriptionForm input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button {
+    background-color: red;
+    color: #f6f7f8;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button:hover {
+    background-color: darkred;
+  }
+
+  .ctaButton {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 0.8rem;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 0;
+    border: 3px dotted black;
+  }
+
+  .websiteBody.dark-mode .ctaButton {
+    background-color: #333;
+    color: #f6f7f8;
+    border-color: #f6f7f8;
+  }
+
+  .ctaButton:hover {
+    background-color: black;
+    color: #f6f7f8;
+    border: 3px dotted white;
+  }
+
+  .websiteBody.dark-mode .ctaButton:hover {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+}
+
+/* Tablet Styles (768px - 1023px) continued */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .websiteBody.dark-mode .offer, 
+  .websiteBody.dark-mode .learning,
+  .websiteBody.dark-mode .about {
+    background-color: #f6f7f8;
+    color: black;
+  }
+
+  .offer a, .learning a, .about a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .websiteFooter {
+    background-color: inherit;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18pt;
+    padding: 1rem;
+  }
+
+  .socialTag {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .back-to-top-img {
+    content: url('Pictures/arrow.png');
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .websiteBody.dark-mode .back-to-top-img {
+    content: url('Pictures/whitearrow.png');
+  }
+
+  .impressum {
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-container {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .websiteBody.dark-mode .form-container {
+    background-color: #333;
+    color: #f6f7f8;
+  }
+
+  .redTeamingSection {
+    background-color: #f6f7f8;
+    padding: 1.5rem;
+    border: 3px dotted #000;
+    margin-bottom: 1.5rem;
+  }
+
+  .websiteBody.dark-mode .redTeamingSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .redTeamingList {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .redTeamingList li {
+    margin-bottom: 0.5rem;
+  }
+
+  .redTeamingList .serviceHighlight {
+    font-weight: bold;
+  }
+
+  .websiteBody.dark-mode .graphicPlaceholder {
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .faqSection {
+    background-color: #f6f7f8;
+    padding: 1.5rem;
+    border: 3px dotted #000;
+    margin-bottom: 1.5rem;
+  }
+
+  .websiteBody.dark-mode .faqSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .faqList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faqList li {
+    margin-bottom: 1rem;
+  }
+
+  .faqQuestion {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .subscriptionForm {
+    background-color: #333;
+    color: #f6f7f8;
+    padding: 1.25rem;
+    border: 3px dotted #000;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+  }
+
+  .websiteBody.dark-mode .subscriptionForm {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+
+  .subscriptionForm input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button {
+    background-color: red;
+    color: #f6f7f8;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .subscriptionForm button:hover {
+    background-color: darkred;
+  }
+
+  .ctaButton {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 0.8rem;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 0;
+    border: 3px dotted black;
+  }
+
+  .websiteBody.dark-mode .ctaButton {
+    background-color: #333;
+    color: #f6f7f8;
+    border-color: #f6f7f8;
+  }
+
+  .ctaButton:hover {
+    background-color: black;
+    color: #f6f7f8;
+    border: 3px dotted white;
+  }
+
+  .websiteBody.dark-mode .ctaButton:hover {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+}
+
+/* Desktop Styles (1024px and above) */
+@media screen and (min-width: 1024px) {
+  .websiteHeader {
+    padding: 2rem 12.5%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .websiteBody.dark-mode {
+    background-color: black;
+    color: #f6f7f8;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .websiteTitle {
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+
+  .websiteTitle a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: red;
+    font-size: 80pt;
+    text-decoration: none;
+    text-shadow: 5px 5px 0 #000, -5px 5px 0 #000, -5px -5px 0 #000, 5px -5px 0 #000;
+  }
+
+  .websiteBody.dark-mode .websiteTitle a {
+    text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
+  }
+
+  .slider-container {
+    position: relative;
+    margin-left: 90%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .slider-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Pictures/full-moon.png');
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: background-image 0.5s ease;
+  }
+
+  .websiteBody.dark-mode .slider-background {
+    background-image: url('Pictures/sun.png');
+  }
+
+  .navList {
+    width: 100%;
+  }
+
+  .navList ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navItem {
+    margin: 0 10px;
+  }
+
+  .navItem:first-child {
+    margin-left: 0;
+  }
+
+  .navItem:last-child {
+    margin-right: 0;
+  }
+
+  .navItem a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: inherit;
+    text-decoration: none;
+    font-size: 30pt;
+  }
+
+  main {
+    flex: 1;
+    padding: 2rem 12.5%;
+    overflow-y: auto;
+  }
+
+  .graphic {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .quotename {
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  blockquote {
+    font-size: 18px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-style: italic;
+  }
+  
+  hr {
+    width: 80%;
+    border: none;
+    border-top: 4px dotted black;
+  }
+  
+  .websiteBody.dark-mode hr {
+    width: 80%;
+    border: none;
+    border-top: 4px dotted white;
+  }
+  
+  main hr {
+    width: 100%;
+  }
+
+  .Ted {
+    text-align: center;
+  }
+
+  .servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
+    font-size: 24pt;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .servicesList, .learningList {
+    padding-top: 0.5em;
+    font-size: 18px;
+  }
+
+  .offer, .learning, .about {
+    outline: 3px dotted currentColor;
+    text-align: center;
+    color: #f6f7f8;
+    background-color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .websiteBody.dark-mode .offer, 
+  .websiteBody.dark-mode .learning, 
+  .websiteBody.dark-mode .about {
+    background-color: #f6f7f8;
+    color: black;
+  }
+
+  .offer a, .learning a, .about a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .websiteFooter {
+    background-color: inherit;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18pt;
+    padding: 1rem;
+  }
+
+  .socialTag {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .back-to-top-img {
+    content: url('Pictures/arrow.png');
+    position: fixed;
+    bottom: 3rem;
+    left: 81%;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .websiteBody.dark-mode .back-to-top-img {
+    content: url('Pictures/whitearrow.png');
+  }
+
+  .impressum {
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-container {
+    background-color: #f6f7f8;
+    color: black;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .websiteBody.dark-mode .form-container {
+    background-color: #333;
+    color: #f6f7f8;
+  }
+
+  .redTeamingSection {
+    background-color: #f6f7f8;
+    padding: 2rem;
+    border: 3px dotted #000;
+    margin-bottom: 2rem;
+  }
+
+  .websiteBody.dark-mode .redTeamingSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .redTeamingList {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  .redTeamingList li {
+    margin-bottom: 0.5rem;
+  }
+
+  .redTeamingList .serviceHighlight {
+    font-weight: bold;
+  }
+
+  .websiteBody.dark-mode .graphicPlaceholder {
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .faqSection {
+    background-color: #f6f7f8;
+    padding: 2rem;
+    border: 3px dotted #000;
+    margin-bottom: 2rem;
+  }
+
+  .websiteBody.dark-mode .faqSection {
+    background-color: #333;
+    border-color: #f6f7f8;
+  }
+
+  .faqList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faqList li {
+    margin-bottom: 1rem;
+  }
+
+  .faqQuestion {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .contactSection {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactForm {
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    border: 3px dotted #000;
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .websiteBody.dark-mode .contactForm {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .websiteBody.dark-mode .formGroup input,
+  .websiteBody.dark-mode .formGroup textarea {
+    border-color: #f6f7f8;
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .formGroup textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .submitButton {
+    background-color: red;
+    color: #f6f7f8;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Pixelify Sans", sans-serif;
+    margin-top: 1rem;
+  }
+
+  .submitButton:hover {
+    background-color: darkred;
+  }
+
+  .websiteBody.dark-mode .submitButton {
+    background-color: #f6f7f8;
+    color: #000;
+  }
+
+  .websiteBody.dark-mode .submitButton:hover {
+    background-color: #ddd;
+  }
+  .ctaButton {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem 0;
+    border: 3px dotted black;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .websiteBody.dark-mode .ctaButton {
+    background-color: #333;
+    color: #f6f7f8;
+    border-color: #f6f7f8;
+  }
+
+  .ctaButton:hover {
+    background-color: black;
+    color: #f6f7f8;
+    border: 3px dotted white;
+  }
+
+  .websiteBody.dark-mode .ctaButton:hover {
+    background-color: #f6f7f8;
+    color: black;
+    border-color: #333;
+  }
+
+  #downloads {
+    background-color: white;
+    color: black;
+  }
+}
