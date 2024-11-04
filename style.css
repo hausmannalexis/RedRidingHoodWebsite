@@ -1,3 +1,4 @@
+
 /* Global Styles */
 html, body {
   height: 100%;
@@ -849,42 +850,83 @@ h1, h2 {
     font-size: 18px;
   }
 
-  .subscriptionForm {
-    background-color: #333;
-    color: #f6f7f8;
-    padding: 1.5rem;
-    border: 3px dotted #000;
-    text-align: center;
+  .contactSection {
+    padding: 2rem;
     margin-bottom: 2rem;
-    font-size: 16px;
   }
 
-  .websiteBody.dark-mode .subscriptionForm {
-    background-color: #f6f7f8;
+  .contactForm {
+    background-color: white;
     color: black;
-    border-color: #333;
+    padding: 2rem;
+    border: 3px dotted #000;
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  .subscriptionForm input[type="email"] {
-    width: 90%;
-    padding: 0.5rem;
+  .websiteBody.dark-mode .contactForm {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+
+  .formGroup {
     margin-bottom: 1rem;
-    font-size: 14px;
   }
 
-  .subscriptionForm button {
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 16px;
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .websiteBody.dark-mode .formGroup input,
+  .websiteBody.dark-mode .formGroup textarea {
+    border-color: #f6f7f8;
+    background-color: #555;
+    color: #f6f7f8;
+  }
+
+  .formGroup textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .submitButton {
     background-color: red;
     color: #f6f7f8;
     border: none;
     padding: 0.7rem 1.5rem;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: "Pixelify Sans", sans-serif;
+    margin-top: 1rem;
   }
 
-  .subscriptionForm button:hover {
+  .submitButton:hover {
     background-color: darkred;
   }
 
+  .websiteBody.dark-mode .submitButton {
+    background-color: #f6f7f8;
+    color: #000;
+  }
+
+  .websiteBody.dark-mode .submitButton:hover {
+    background-color: #ddd;
+  }
   .ctaButton {
     background-color: white;
     color: black;
@@ -914,5 +956,10 @@ h1, h2 {
     background-color: #f6f7f8;
     color: black;
     border-color: #333;
+  }
+
+  #downloads {
+    background-color: white;
+    color: black;
   }
 }
