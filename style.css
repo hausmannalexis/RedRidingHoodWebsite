@@ -962,4 +962,9 @@ h1, h2 {
     background-color: white;
     color: black;
   }
+  
+  .websiteBody.dark-mode #downloads {
+    background-color: black;
+    color: white;
+  }
 }
