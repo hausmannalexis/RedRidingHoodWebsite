@@ -1,565 +1,26 @@
 /* Global Styles */
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
   font-family: "Pixelify Sans", sans-serif;
   width: 100%;
 }
 
 body {
   overflow-x: hidden;
+  font-size: 16pt;
 }
 
 h1, h2 {
   font-family: "Pixelify Sans", sans-serif;
 }
 
-/* Phone Styles (0px - 767px) */
+/* Phone Styles*/
 @media screen and (max-width: 767px) {
-  .websiteBody {
-    min-height: 100vh;
-    background-color: white;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 16px;
-  }
-
-  .websiteBody.dark-mode {
-    background-color: black;
-    color: white;
-  }
-
   .websiteHeader {
-    top: 0;
-    z-index: 250;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .websiteTitle {
-    margin-bottom: 1rem;
-  }
-
-  .websiteTitle a {
-    font-family: "Pixelify Sans", sans-serif;
-    color: red;
-    font-size: 36pt;
-    text-decoration: none;
-    text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000;
-  }
-
-  .websiteBody.dark-mode .websiteTitle a {
-    text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
-  }
-
-  .slider-container {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-
-  .slider-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('Pictures/full-moon.png');
-    background-size: 40px 40px;
-    background-repeat: no-repeat;
-    background-position: left;
-    transition: background-image 0.5s ease;
-  }
-
-  .websiteBody.dark-mode .slider-background {
-    background-image: url('Pictures/sun.png');
-  }
-
-  .navList {
-    width: 100%;
-  }
-
-  .navList ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-
-  .navItem {
-    margin-bottom: 10px;
-  }
-
-  .navItem:last-child {
-    margin-bottom: 0;
-  }
-
-  .navItem a {
-    font-family: "Pixelify Sans", sans-serif;
-    color: inherit;
-    text-decoration: none;
-    font-size: 24pt;
-  }
-
-  main {
-    flex: 1;
-    padding: 1rem;
-    overflow-y: auto;
-  }
-
-  .graphic {
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .quotename {
-    font-size: 20px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
-  blockquote {
-    font-size: 18px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 1rem;
-    font-style: italic;
-  }
-
-  .Ted {
-    text-align: center;
-  }
-
-  .servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
-    font-size: 24pt;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .servicesList, .learningList {
-    padding-top: 0.5em;
-    font-size: 18px;
-  }
-
-  .offer, .learning, .about {
-    outline: 3px dotted currentColor;
-    text-align: center;
-    color: black;
-    background-color: black;
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-
-  .websiteBody.dark-mode .offer, 
-  .websiteBody.dark-mode .learning, 
-  .websiteBody.dark-mode .about {
-    background-color: black;
-    color: white;
-  }
-
-  .offer a, .learning a, .about a {
-    text-decoration: none;
-  }
-
-  .websiteFooter {
-    font-family: "Pixelify Sans", sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 18pt;
-    padding: 1rem;
-  }
-
-  .socialTag {
-    position: relative;
-    font-family: "Pixelify Sans", sans-serif;
-  }
-
-  .back-to-top-img {
-    content: url('Pictures/arrow.png');
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 30px;
-    height: auto;
-    cursor: pointer;
-  }
-
-  .websiteBody.dark-mode .back-to-top-img {
-    content: url('Pictures/whitearrow.png');
-  }
-
-  .impressum {
-    padding: 1rem;
-    text-align: center;
-    font-style: normal;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .form-container {
-    background-color: white;
-    color: black;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .websiteBody.dark-mode .form-container {
-    background-color: black;
-    color: white;
-  }
-
-  .redTeamingSection {
-    background-color: white;
-    padding: 1rem;
-    border: 3px dotted #000;
-    margin-bottom: 1rem;
-  }
-
-  .websiteBody.dark-mode .redTeamingSection {
-    background-color: #black;
-    border-color: white;
-  }
-
-  .redTeamingList {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 1rem 0;
-    padding-left: 1rem;
-  }
-
-  .redTeamingList li {
-    margin-bottom: 0.5rem;
-  }
-
-  .redTeamingList .serviceHighlight {
-    font-weight: bold;
-  }
-
-  .websiteBody.dark-mode .graphicPlaceholder {
-    background-color: black;
-    color: white;
-  }
-
-  .faqSection {
-    background-color: white;
-    padding: 1rem;
-    border: 3px dotted black;
-    margin-bottom: 1rem;
-  }
-
-  .websiteBody.dark-mode .faqSection {
-    background-color: black;
-    border-color: white;
-  }
-
-  .faqList {
-    list-style-type: none;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .faqList li {
-    margin-bottom: 1rem;
-  }
-
-  .faqQuestion {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .subscriptionForm {
-    background-color: white;
-    color: black;
-    padding: 1rem;
-    border: 3px dotted black;
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 16px;
-  }
-
-  .websiteBody.dark-mode .subscriptionForm {
-    background-color: black;
-    color: white;
-    border-color: white;
-  }
-
-  .subscriptionForm input[type="email"] {
-    width: 90%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 14px;
-  }
-
-  .subscriptionForm button {
-    background-color: red;
-    color: #f6f7f8;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    cursor: pointer;
-    font-size: 14px;
-  }
-
-  .subscriptionForm button:hover {
-    background-color: darkred;
-  }
-
-  .ctaButton {
-    background-color: white;
-    color: black;
-    padding: 0.8rem;
-    display: inline-block;
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    margin: 1rem 0;
-    border: 3px dotted black;
-  }
-
-  .websiteBody.dark-mode .ctaButton {
-    background-color: black;
-    color: white;
-    border-color: white;
-  }
-
-  .ctaButton:hover {
-    background-color: black;
-    color: #f6f7f8;
-    border: 3px dotted white;
-  }
-
-  .websiteBody.dark-mode .ctaButton:hover {
-    background-color: black;
-    color: white;
-    border-color: white;
-  }
-}
-
-/* Tablet Styles (768px - 1023px) continued */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .websiteBody.dark-mode .offer, 
-  .websiteBody.dark-mode .learning,
-  .websiteBody.dark-mode .about {
-    background-color: #f6f7f8;
-    color: black;
-  }
-
-  .offer a, .learning a, .about a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .websiteFooter {
-    background-color: inherit;
-    font-family: "Pixelify Sans", sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 18pt;
-    padding: 1rem;
-  }
-
-  .socialTag {
-    position: relative;
-    font-family: "Pixelify Sans", sans-serif;
-  }
-
-  .back-to-top-img {
-    content: url('Pictures/arrow.png');
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 35px;
-    height: auto;
-    cursor: pointer;
-  }
-
-  .websiteBody.dark-mode .back-to-top-img {
-    content: url('Pictures/whitearrow.png');
-  }
-
-  .impressum {
-    padding: 1rem;
-    text-align: center;
-    font-style: normal;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .form-container {
-    background-color: #f6f7f8;
-    color: black;
-    padding: 20px;
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .websiteBody.dark-mode .form-container {
-    background-color: #333;
-    color: #f6f7f8;
-  }
-
-  .redTeamingSection {
-    background-color: #f6f7f8;
-    padding: 1.5rem;
-    border: 3px dotted #000;
-    margin-bottom: 1.5rem;
-  }
-
-  .websiteBody.dark-mode .redTeamingSection {
-    background-color: #333;
-    border-color: #f6f7f8;
-  }
-
-  .redTeamingList {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 1rem 0;
-    padding-left: 1rem;
-  }
-
-  .redTeamingList li {
-    margin-bottom: 0.5rem;
-  }
-
-  .redTeamingList .serviceHighlight {
-    font-weight: bold;
-  }
-
-  .websiteBody.dark-mode .graphicPlaceholder {
-    background-color: #555;
-    color: #f6f7f8;
-  }
-
-  .faqSection {
-    background-color: #f6f7f8;
-    padding: 1.5rem;
-    border: 3px dotted #000;
-    margin-bottom: 1.5rem;
-  }
-
-  .websiteBody.dark-mode .faqSection {
-    background-color: #333;
-    border-color: #f6f7f8;
-  }
-
-  .faqList {
-    list-style-type: none;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .faqList li {
-    margin-bottom: 1rem;
-  }
-
-  .faqQuestion {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .subscriptionForm {
-    background-color: #333;
-    color: #f6f7f8;
-    padding: 1.25rem;
-    border: 3px dotted #000;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 16px;
-  }
-
-  .websiteBody.dark-mode .subscriptionForm {
-    background-color: #f6f7f8;
-    color: black;
-    border-color: #333;
-  }
-
-  .subscriptionForm input[type="email"] {
-    width: 90%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 14px;
-  }
-
-  .subscriptionForm button {
-    background-color: red;
-    color: #f6f7f8;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    cursor: pointer;
-    font-size: 14px;
-  }
-
-  .subscriptionForm button:hover {
-    background-color: darkred;
-  }
-
-  .ctaButton {
-    background-color: #f6f7f8;
-    color: black;
-    padding: 0.8rem;
-    display: inline-block;
-    font-size: 15px;
-    text-align: center;
-    text-decoration: none;
-    margin: 1rem 0;
-    border: 3px dotted black;
-  }
-
-  .websiteBody.dark-mode .ctaButton {
-    background-color: #333;
-    color: #f6f7f8;
-    border-color: #f6f7f8;
-  }
-
-  .ctaButton:hover {
-    background-color: black;
-    color: #f6f7f8;
-    border: 3px dotted white;
-  }
-
-  .websiteBody.dark-mode .ctaButton:hover {
-    background-color: #f6f7f8;
-    color: black;
-    border-color: #333;
-  }
-}
-
-/* Desktop Styles (1024px and above) */
-@media screen and (min-width: 1024px) {
-  .websiteHeader {
-    padding: 2rem 12.5%;
-    top: 0;
+    padding: 1rem 12.5%;
+    top: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -567,7 +28,7 @@ h1, h2 {
 
   .websiteBody.dark-mode {
     background-color: black;
-    color: #f6f7f8;
+    color: white;
   }
 
   .header-content {
@@ -585,20 +46,20 @@ h1, h2 {
   .websiteTitle a {
     font-family: "Pixelify Sans", sans-serif;
     color: red;
-    font-size: 80pt;
+    font-size: 48pt;
     text-decoration: none;
-    text-shadow: 5px 5px 0 #000, -5px 5px 0 #000, -5px -5px 0 #000, 5px -5px 0 #000;
+    text-shadow: 3px 3px 0 black, -3px 3px 0 black, -3px -3px 0 black, 3px -3px 0 black;
   }
 
   .websiteBody.dark-mode .websiteTitle a {
-    text-shadow: 3px 3px 0 #f6f7f8, -3px 3px 0 #f6f7f8, -3px -3px 0 #f6f7f8, 3px -3px 0 #f6f7f8;
+    text-shadow: 3px 3px 0 white, -3px 3px 0 white, -3px -3px 0 white, 3px -3px 0 white;
   }
 
   .slider-container {
     position: relative;
-    margin-left: 90%;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1rem;
     cursor: pointer;
   }
 
@@ -607,7 +68,266 @@ h1, h2 {
     width: 100%;
     height: 100%;
     background-image: url('Pictures/full-moon.png');
-    background-size: 40px 40px;
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition: background-image 0.5s ease;
+  }
+
+  .websiteBody.dark-mode .slider-background {
+    background-image: url('Pictures/sun.png');
+  }
+
+  .navList {
+    width: 100%;
+  }
+
+  .navList ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navItem {
+    margin: 0 10px;
+  }
+
+  .navItem:first-child {
+    margin-left: 0;
+  }
+
+  .navItem:last-child {
+    margin-right: 0;
+  }
+
+  .navItem a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: inherit;
+    text-decoration: none;
+    font-size: 16pt;
+  }
+
+  main {
+    flex: 1;
+    padding: 2rem 12.5%;
+    overflow-y: auto;
+  }
+
+  h2 a {
+    color: black;
+  }
+
+  #img {
+    border: 4px dotted black;
+  }
+
+  .websiteBody.dark-mode #img {
+    border: 4px dotted white;
+  }
+  
+  hr {
+    width: 80%;
+    border: none;
+    border-top: 4px dotted black;
+  }
+  
+  .websiteBody.dark-mode hr {
+    width: 80%;
+    border: none;
+    border-top: 4px dotted white;
+  }
+  
+  main hr {
+    width: 100%;
+  }
+
+  .websiteFooter {
+    background-color: inherit;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12pt;
+    padding: 1rem;
+  }
+
+  .socialTag {
+    position: relative;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .back-to-top-img {
+    content: url('Pictures/arrow.png');
+    position: fixed;
+    bottom: 3rem;
+    left: 81%;
+    width: 44px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .websiteBody.dark-mode .back-to-top-img {
+    content: url('Pictures/whitearrow.png');
+  }
+
+  .impressum {
+    padding: 1rem;
+    text-align: center;
+    font-style: normal;
+  }
+
+  .contactSection {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactForm {
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    border: 3px dotted black;
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .websiteBody.dark-mode .contactForm {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+
+  .formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 18px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 14pt;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+  }
+
+  .websiteBody.dark-mode .formGroup input,
+  .websiteBody.dark-mode .formGroup textarea {
+    border-color: white;
+    background-color: black;
+    color: white;
+  }
+
+  .formGroup textarea {
+    height: 150px;
+    resize: vertical;
+  }
+
+  .submitButton {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-size: 14pt;
+    font-family: "Pixelify Sans", sans-serif;
+    margin-top: 1rem;
+  }
+
+  .websiteBody.dark-mode .submitButton {
+    background-color: white;
+    color: black;
+  }
+
+  #ctaButton {
+    background-color: white;
+    color: black;
+    font-size: 18pt;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+  .websiteBody.dark-mode #ctaButton {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
+ 
+  #downloads {
+    background-color: white;
+    color: black;
+  }
+  
+  .websiteBody.dark-mode #downloads {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Desktop Styles*/
+@media screen and (min-width: 768px) {
+  .websiteHeader {
+    padding: 2rem 12.5%;
+    top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .websiteBody.dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .websiteTitle {
+    margin-bottom: 0.25rem;
+    text-align: center;
+  }
+
+  .websiteTitle a {
+    font-family: "Pixelify Sans", sans-serif;
+    color: red;
+    font-size: 8rem;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 black, -3px 3px 0 black, -3px -3px 0 black, 3px -3px 0 black;
+    width: 100%;
+  }
+
+  .websiteBody.dark-mode .websiteTitle a {
+    text-shadow: 3px 3px 0 white, -3px 3px 0 white, -3px -3px 0 white, 3px -3px 0 white;
+  }
+
+  .slider-container {
+    position: relative;
+    margin-left: 90%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+  }
+
+  .slider-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Pictures/full-moon.png');
+    background-size: 44px 44px;
     background-repeat: no-repeat;
     background-position: left;
     transition: background-image 0.5s ease;
@@ -655,27 +375,8 @@ h1, h2 {
     overflow-y: auto;
   }
 
-  .graphic {
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .quotename {
-    font-size: 20px;
-    width: 60%;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
-  blockquote {
-    font-size: 18px;
-    width: 60%;
-    margin: 0 auto;
-    padding: 1rem;
-    font-style: italic;
+  h2 a {
+    color: black;
   }
   
   hr {
@@ -689,46 +390,17 @@ h1, h2 {
     border: none;
     border-top: 4px dotted white;
   }
+
+  #img {
+    border: 4px dotted black;
+  }
+
+  .websiteBody.dark-mode #img {
+    border: 4px dotted white;
+  }
   
   main hr {
     width: 100%;
-  }
-
-  .Ted {
-    text-align: center;
-  }
-
-  .servicesTitle, .learningTitle, .aboutTitle, .sectionTitle {
-    font-size: 24pt;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .servicesList, .learningList {
-    padding-top: 0.5em;
-    font-size: 18px;
-  }
-
-  .offer, .learning, .about {
-    outline: 3px dotted currentColor;
-    text-align: center;
-    color: #f6f7f8;
-    background-color: black;
-    padding: 1rem;
-    margin: 1rem 0;
-  }
-
-  .websiteBody.dark-mode .offer, 
-  .websiteBody.dark-mode .learning, 
-  .websiteBody.dark-mode .about {
-    background-color: #f6f7f8;
-    color: black;
-  }
-
-  .offer a, .learning a, .about a {
-    text-decoration: none;
-    color: inherit;
   }
 
   .websiteFooter {
@@ -766,87 +438,6 @@ h1, h2 {
     font-style: normal;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .form-container {
-    background-color: #f6f7f8;
-    color: black;
-    padding: 20px;
-    width: 50%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .websiteBody.dark-mode .form-container {
-    background-color: #333;
-    color: #f6f7f8;
-  }
-
-  .redTeamingSection {
-    background-color: #f6f7f8;
-    padding: 2rem;
-    border: 3px dotted #000;
-    margin-bottom: 2rem;
-  }
-
-  .websiteBody.dark-mode .redTeamingSection {
-    background-color: #333;
-    border-color: #f6f7f8;
-  }
-
-  .redTeamingList {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 1rem 0;
-    padding-left: 1rem;
-  }
-
-  .redTeamingList li {
-    margin-bottom: 0.5rem;
-  }
-
-  .redTeamingList .serviceHighlight {
-    font-weight: bold;
-  }
-
-  .websiteBody.dark-mode .graphicPlaceholder {
-    background-color: #555;
-    color: #f6f7f8;
-  }
-
-  .faqSection {
-    background-color: #f6f7f8;
-    padding: 2rem;
-    border: 3px dotted #000;
-    margin-bottom: 2rem;
-  }
-
-  .websiteBody.dark-mode .faqSection {
-    background-color: #333;
-    border-color: #f6f7f8;
-  }
-
-  .faqList {
-    list-style-type: none;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .faqList li {
-    margin-bottom: 1rem;
-  }
-
-  .faqQuestion {
-    font-weight: bold;
-    font-size: 18px;
-  }
-
   .contactSection {
     padding: 2rem;
     margin-bottom: 2rem;
@@ -856,7 +447,7 @@ h1, h2 {
     background-color: white;
     color: black;
     padding: 2rem;
-    border: 3px dotted #000;
+    border: 3px dotted black;
     width: 60%;
     max-width: 600px;
     margin: 0 auto;
@@ -884,16 +475,16 @@ h1, h2 {
     width: 100%;
     padding: 0.5rem;
     font-size: 16px;
-    border: 2px solid #000;
-    background-color: #fff;
-    color: #000;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
   }
 
   .websiteBody.dark-mode .formGroup input,
   .websiteBody.dark-mode .formGroup textarea {
-    border-color: #f6f7f8;
-    background-color: #555;
-    color: #f6f7f8;
+    border-color: white;
+    background-color: black;
+    color: white;
   }
 
   .formGroup textarea {
@@ -902,59 +493,35 @@ h1, h2 {
   }
 
   .submitButton {
-    background-color: red;
-    color: #f6f7f8;
+    background-color: black;
+    color: white;
     border: none;
     padding: 0.7rem 1.5rem;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16pt;
     font-family: "Pixelify Sans", sans-serif;
     margin-top: 1rem;
   }
 
-  .submitButton:hover {
-    background-color: darkred;
-  }
-
   .websiteBody.dark-mode .submitButton {
-    background-color: #f6f7f8;
-    color: #000;
-  }
-
-  .websiteBody.dark-mode .submitButton:hover {
-    background-color: #ddd;
-  }
-  .ctaButton {
     background-color: white;
     color: black;
-    padding: 1rem;
-    display: inline-block;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    margin: 1rem 0;
-    border: 3px dotted black;
+  }
+
+  #ctaButton {
+    background-color: white;
+    color: black;
+    font-size: 20pt;
+    padding: 0;
     font-family: "Pixelify Sans", sans-serif;
   }
 
-  .websiteBody.dark-mode .ctaButton {
-    background-color: #333;
-    color: #f6f7f8;
-    border-color: #f6f7f8;
-  }
-
-  .ctaButton:hover {
+  .websiteBody.dark-mode #ctaButton {
     background-color: black;
-    color: #f6f7f8;
-    border: 3px dotted white;
+    color: white;
+    border-color: white;
   }
-
-  .websiteBody.dark-mode .ctaButton:hover {
-    background-color: #f6f7f8;
-    color: black;
-    border-color: #333;
-  }
-
+ 
   #downloads {
     background-color: white;
     color: black;
